@@ -11,37 +11,40 @@ var pixel = function(x, y, size, on)
         var pixelsAround = 0;
         for(var i in pixels)
         {
-            if(pixels[i].x - this.size == x && pixels[i].y == y && pixels[i].on)
+            if(pixels[i].on)
             {
-                pixelsAround++;
-            }
-            else if(pixels[i].x + this.size == x && pixels[i].y == y && pixels[i].on)
-            {
-                pixelsAround++;
-            }
-            else if(pixels[i].x == x && pixels[i].y - this.size == y && pixels[i].on)
-            {
-                pixelsAround++;
-            }
-            else if(pixels[i].x == x && pixels[i].y + this.size == y && pixels[i].on)
-            {
-                pixelsAround++;
-            }
-            else if(pixels[i].x - this.size == x && pixels[i].y - this.size == y && pixels[i].on)
-            {
-                pixelsAround++;
-            }
-            else if(pixels[i].x - this.size == x && pixels[i].y + this.size == y && pixels[i].on)
-            {
-                pixelsAround++;
-            }
-            else if(pixels[i].x + this.size == x && pixels[i].y - this.size == y && pixels[i].on)
-            {
-                pixelsAround++;
-            }
-            else if(pixels[i].x + this.size == x && pixels[i].y + this.size == y && pixels[i].on)
-            {
-                pixelsAround++;
+                if(pixels[i].x - this.size == x && pixels[i].y == y)
+                {
+                    pixelsAround++;
+                }
+                else if(pixels[i].x + this.size == x && pixels[i].y == y)
+                {
+                    pixelsAround++;
+                }
+                else if(pixels[i].x == x && pixels[i].y - this.size == y)
+                {
+                    pixelsAround++;
+                }
+                else if(pixels[i].x == x && pixels[i].y + this.size == y)
+                {
+                    pixelsAround++;
+                }
+                else if(pixels[i].x - this.size == x && pixels[i].y - this.size == y)
+                {
+                    pixelsAround++;
+                }
+                else if(pixels[i].x - this.size == x && pixels[i].y + this.size == y)
+                {
+                    pixelsAround++;
+                }
+                else if(pixels[i].x + this.size == x && pixels[i].y - this.size == y )
+                {
+                    pixelsAround++;
+                }
+                else if(pixels[i].x + this.size == x && pixels[i].y + this.size == y)
+                {
+                    pixelsAround++;
+                }
             }
         }
         
